@@ -1,0 +1,58 @@
+Using TensorFlow backend.
+2020-05-09 19:38:45.070467: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'cudart64_101.dll'; dlerror: cudart64_101.dll not found
+2020-05-09 19:38:45.077659: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+Choose current ENV [test, presentation]: test
+Presentation not set for Test environment
+2020-05-09 19:38:49.555494: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'nvcuda.dll'; dlerror: nvcuda.dll not found
+2020-05-09 19:38:49.568182: E tensorflow/stream_executor/cuda/cuda_driver.cc:351] failed call to cuInit: UNKNOWN ERROR (303)
+2020-05-09 19:38:49.590549: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: LAPTOP-N052NH8U
+2020-05-09 19:38:49.613855: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: LAPTOP-N052NH8U
+2020-05-09 19:38:49.623182: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+Model: "vgg16"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         (None, 640, 640, 3)       0
+_________________________________________________________________
+block1_conv1 (Conv2D)        (None, 640, 640, 64)      1792
+_________________________________________________________________
+block1_conv2 (Conv2D)        (None, 640, 640, 64)      36928
+_________________________________________________________________
+block1_pool (MaxPooling2D)   (None, 320, 320, 64)      0
+_________________________________________________________________
+block2_conv1 (Conv2D)        (None, 320, 320, 128)     73856
+_________________________________________________________________
+block2_conv2 (Conv2D)        (None, 320, 320, 128)     147584
+_________________________________________________________________
+block2_pool (MaxPooling2D)   (None, 160, 160, 128)     0
+_________________________________________________________________
+block3_conv1 (Conv2D)        (None, 160, 160, 256)     295168
+_________________________________________________________________
+block3_conv2 (Conv2D)        (None, 160, 160, 256)     590080
+_________________________________________________________________
+block3_conv3 (Conv2D)        (None, 160, 160, 256)     590080
+_________________________________________________________________
+block3_pool (MaxPooling2D)   (None, 80, 80, 256)       0
+_________________________________________________________________
+block4_conv1 (Conv2D)        (None, 80, 80, 512)       1180160
+_________________________________________________________________
+block4_conv2 (Conv2D)        (None, 80, 80, 512)       2359808
+_________________________________________________________________
+block4_conv3 (Conv2D)        (None, 80, 80, 512)       2359808
+_________________________________________________________________
+block4_pool (MaxPooling2D)   (None, 40, 40, 512)       0
+_________________________________________________________________
+block5_conv1 (Conv2D)        (None, 40, 40, 512)       2359808
+_________________________________________________________________
+block5_conv2 (Conv2D)        (None, 40, 40, 512)       2359808
+_________________________________________________________________
+block5_conv3 (Conv2D)        (None, 40, 40, 512)       2359808
+_________________________________________________________________
+block5_pool (MaxPooling2D)   (None, 20, 20, 512)       0
+=================================================================
+Total params: 14,714,688
+Trainable params: 14,714,688
+Non-trainable params: 0
+_________________________________________________________________
+[2 2 2 2 1 1 1 1 4 3 3 3 0 0 0 0]
+['.\\test\\1 - Copy (2).bmp', '.\\test\\1 - Copy (3).bmp', '.\\test\\1 - Copy.bmp', '.\\test\\1.bmp', '.\\test\\2 - Copy (2).bmp', '.\\test\\2 - Copy (3).bmp', '.\\test\\2 - Copy.bmp', '.\\test\\2.bmp', '.\\test\\3 - Copy (2).bmp', '.\\test\\3 - Copy (3).bmp', '.\\test\\3 - Copy.bmp', '.\\test\\3.bmp', '.\\test\\4 - Copy (2).bmp', '.\\test\\4 - Copy (3).bmp', '.\\test\\4 - Copy.bmp', '.\\test\\4.bmp']
